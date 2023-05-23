@@ -106,6 +106,8 @@ yarn cypress:open
 
 > 🚩 **Note**
 >
+
+
 > If you have changed the default ports, then you need to update Cypress configuration file (`cypress.json`) locally.
 > There are three properties that you need to update in `cypress.json`: `baseUrl`, `apiUrl`, and `url`.
 > The port number in `baseUrl` corresponds to `PORT` variable in `.env` file. Similarly, the port number in `apiUrl` and `url` correspond to `REACT_APP_BACKEND_PORT`.
