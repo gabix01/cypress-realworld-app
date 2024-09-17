@@ -72,3 +72,11 @@ ui-firefox-mobile:
   script:
     - yarn start:ci & npx wait-on http://localhost:3000
     - npx cypress run --record --parallel --browser firefox --group "UI - Firefox - Mobile" --spec "cypress/tests/ui/*" --config "viewportWidth=375,viewportHeight=667"
+
+ui-edge-mobile:
+  image: cypress/browsers:node14.17.0-chrome88-ff89
+  stage: test
+  parallel: 5
+  script:
+    - yarn start:ci & npx wait-on http://localhost:3000
+    - npx cypress run --record --parallel --browser Edge --group "UI - Edge - Mobile" --spec "cypress/tests/ui/*" --config "viewportWidth=375,viewportHeight=667"
